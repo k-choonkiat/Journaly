@@ -11,9 +11,9 @@ const userSchema = new Schema({
         required: true
     },
     happy:[{type:String}],
-    sad:[{type:String}],
+    sad:[{type:String}]},
     {collection: 'users'}
     
-})
+)
 
 module.exports = User = mongoose.model('users',userSchema);
