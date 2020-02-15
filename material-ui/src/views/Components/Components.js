@@ -18,6 +18,16 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
+//import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+
+import Typography from '@material-ui/core/Typography';
+
+
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionBasics from "./Sections/SectionBasics.js";
 import SectionNavbars from "./Sections/SectionNavbars.js";
@@ -31,6 +41,7 @@ import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
 import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
+import doctor1 from "../../assets/img/faces/a.jpg"
 
 import styles from "assets/jss/material-kit-react/views/components.js";
 
@@ -78,6 +89,8 @@ export default function Components(props) {
                       {/* <SectionBasics /> */}
                       {/* <SectionNavbars /> */}
                       {/* <SectionTabs />
+                      {/* <SectionNavbars />
+                      <SectionTabs />
                       <SectionPills />
                       <SectionNotifications />
                       <SectionTypography />
@@ -112,37 +125,53 @@ export default function Components(props) {
                     )
                   },
                   {
-                    tabName: "Messages",
-                    tabIcon: Chat,
+                    tabName: "Counselors",
+                    tabIcon: "personPinIcon",
                     tabContent: (
-                      <p className={classes.textCenter}>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. I will be the leader of a company
-                        that ends up being worth billions of dollars, because I
-                        got the answers. I understand culture. I am the nucleus.
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at.
-                      </p>
+                      <Card className={classes.root}>
+                      <CardActionArea>
+                        < CardMedia
+                          className={classes.media}
+                          image= "bg3.jpg"
+                          title=  "Contemplative Reptile"
+                        />
+                        <CardContent>
+                          <img style= {{height: "200px", width: "280px"}} src= {doctor1} alt= "doctorA" />
+                          <Typography gutterBottom variant="h5" component="h2">
+                            Mary Jones
+                          </Typography>
+                          <Typography variant="body2" color="textSecondary" component="p">
+                          When asked what they want to change when they come to counselling, many people say they just want to be happy. However, when asked how they would know they were happy, most of them are completely stumped. Happiness seems to be something people...
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <Button size="small" color="primary">
+                          Share
+                        </Button>
+                        <Button size="small" color="primary">
+                          Learn More
+                        </Button>
+                      </CardActions>
+                    </Card>
                     )
                   },
-                  {
-                    tabName: "Settings",
-                    tabIcon: Build,
-                    tabContent: (
-                      <p className={classes.textCenter}>
-                        think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
-                      </p>
-                    )
-                  }
+                  //  {
+                  //   tabName: "Settings",
+                  //   tabIcon: Build,
+                  //   tabContent: (
+                  //     <p className={classes.textCenter}>
+                  //       think that’s a responsibility that I have, to push
+                  //       possibilities, to show people, this is the level that
+                  //       things could be at. So when you get something that has
+                  //       the name Kanye West on it, it’s supposed to be pushing
+                  //       the furthest possibilities. I will be the leader of a
+                  //       company that ends up being worth billions of dollars,
+                  //       because I got the answers. I understand culture. I am
+                  //       the nucleus.
+                  //     </p>
+                  //   )
+                  //  }
                 ]}
               />
             </GridItem>
