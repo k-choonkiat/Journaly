@@ -10,7 +10,7 @@ export default class Nav extends React.Component{
     return(
     <div>
       <Navbar bg="light" expand="lg">
-  <Navbar.Brand href="Home">Home</Navbar.Brand>
+  <Navbar.Brand href="/">Home</Navbar.Brand>
   <Navbar.Brand href="Journal">Journal</Navbar.Brand>
   <Navbar.Brand href="Counselor">Counselling Services</Navbar.Brand>
   <Navbar.Collapse id="basic-navbar-nav">
