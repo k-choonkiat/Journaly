@@ -1,4 +1,18 @@
 import React from "react";
+import clsx from 'clsx';
+import { makeStyles } from '@material-ui/core/styles';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+
+// import FormLabel from '@material-ui/core/FormLabel';
+// import FormControl from '@material-ui/core/FormControl';
+// import FormGroup from '@material-ui/core/FormGroup';
+// import FormControlLabel from '@material-ui/core/FormControlLabel';
+// import FormHelperText from '@material-ui/core/FormHelperText';
+// import Switch from '@material-ui/core/Switch';
 import CustomTabs from "components/CustomTabs/CustomTabs.js";
 import Face from "@material-ui/icons/Face";
 import Chat from "@material-ui/icons/Chat";
@@ -8,7 +22,7 @@ import classNames from "classnames";
 // react components for routing our app without refresh
 import { Link } from "react-router-dom";
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 // core components
 import Header from "components/Header/Header.js";
@@ -45,7 +59,64 @@ import doctor1 from "../../assets/img/faces/a.jpg"
 
 import styles from "assets/jss/material-kit-react/views/components.js";
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+  root: {
+    '&:hover': {
+      backgroundColor: 'transparent',
+    },
+  },
+  icon: {
+    borderRadius: '50%',
+    width: 16,
+    height: 16,
+    boxShadow: 'inset 0 0 0 1px rgba(16,22,26,.2), inset 0 -1px 0 rgba(16,22,26,.1)',
+    backgroundColor: '#f5f8fa',
+    backgroundImage: 'linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0))',
+    '$root.Mui-focusVisible &': {
+      outline: '2px auto rgba(19,124,189,.6)',
+      outlineOffset: 2,
+    },
+    'input:hover ~ &': {
+      backgroundColor: '#ebf1f5',
+    },
+    'input:disabled ~ &': {
+      boxShadow: 'none',
+      background: 'rgba(206,217,224,.5)',
+    },
+  },
+  checkedIcon: {
+    backgroundColor: '#137cbd',
+    backgroundImage: 'linear-gradient(180deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,0))',
+    '&:before': {
+      display: 'block',
+      width: 16,
+      height: 16,
+      backgroundImage: 'radial-gradient(#fff,#fff 28%,transparent 32%)',
+      content: '""',
+    },
+    'input:hover ~ &': {
+      backgroundColor: '#106ba3',
+    },
+  },
+});
+
+// Inspired by blueprintjs
+function StyledRadio(props) {
+  const classes = useStyles();
+
+  return (
+    <Radio
+      className={classes.root}
+      disableRipple
+      color="default"
+      checkedIcon={<span className={clsx(classes.icon, classes.checkedIcon)} />}
+      icon={<span className={classes.icon} />}
+      {...props}
+    />
+  );
+}
+
+
 
 export default function Components(props) {
   const classes = useStyles();
@@ -72,16 +143,30 @@ export default function Components(props) {
                     tabName: "Client",
                     tabIcon: Face,
                     tabContent: (
-
+                      // image={require("")
                       <div className={classNames(classes.main)}>
-                        <Parallax image={require("assets/img/bg4.jpg")}>
+                        <Parallax >
          <div className={classes.container}>
              <div className={classes.brand}>
-                 <h1 className={classes.title}>Set my mood.</h1>
-                 <h3 className={classes.subtitle}>
-                   How are you feeling today.
-                 </h3>
-                 <h2>My form goes here... maybe</h2>
+                 <h1 className={classes.title}>Healing is not Linear</h1>
+                 {/* <h9 className={classes.subtitle}>
+                 How Are You Feel Today?
+                 </h9> */}
+                 <FormControl component="fieldset">
+      <FormLabel component="legend">How Are You Feel Today?</FormLabel>
+      <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
+        <FormControlLabel value="female" control={<StyledRadio />} label="Confused" />
+        <FormControlLabel value="male" control={<StyledRadio />} label="Okay, I guess" />
+        <FormControlLabel value="other" control={<StyledRadio />} label="Energized" />
+        {/* <FormControlLabel
+          value="disabled"
+          disabled
+          control={<StyledRadio />}
+          label="(Disabled option)"
+        /> */}
+      </RadioGroup>
+    </FormControl>
+                 <h2></h2>
                </div>
           
          </div>
@@ -108,25 +193,15 @@ export default function Components(props) {
                       <SectionExamples />
                       <SectionDownload /> */}
                     </div>
-
-
-
-      //                 <Parallax image={require("assets/img/bg4.jpg")}>
-      //   <div className={classes.container}>
-      //         <div className={classes.brand}>
-      //           <h1 className={classes.title}>Material Kit React.</h1>
-      //           <h3 className={classes.subtitle}>
-      //             A Badass Material-UI Kit based on Material Design.
-      //           </h3>
-      //         </div>
-          
-      //   </div>
-      // </Parallax>
                     )
                   },
                   {
                     tabName: "Counselors",
+<<<<<<< HEAD
                     tabIcon: "personPinIcon",
+=======
+                    tabIcon: Chat,
+>>>>>>> 89c4960157efb353a44306e5d9ce5a07a811a2f9
                     tabContent: (
                       <Card className={classes.root}>
                       <CardActionArea>
