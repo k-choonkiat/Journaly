@@ -197,11 +197,7 @@ export default function Components(props) {
                   },
                   {
                     tabName: "Counselors",
-<<<<<<< HEAD
                     tabIcon: "personPinIcon",
-=======
-                    tabIcon: Chat,
->>>>>>> 89c4960157efb353a44306e5d9ce5a07a811a2f9
                     tabContent: (
                       <Card className={classes.root}>
                       <CardActionArea>
