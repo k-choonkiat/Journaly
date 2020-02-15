@@ -12,33 +12,33 @@ const customCheckboxRadioSwitch = {
       backgroundColor: "unset"
     }
   },
-  radioRoot: {
-    padding: "12px",
-    "&:hover": {
-      backgroundColor: "unset"
-    }
-  },
-  labelRoot: {
-    marginLeft: "-14px"
-  },
-  checkboxAndRadio: {
-    position: "relative",
-    display: "block",
-    marginTop: "10px",
-    marginBottom: "10px"
-  },
-  checkboxAndRadioHorizontal: {
-    position: "relative",
-    display: "block",
-    "&:first-child": {
-      marginTop: "10px"
-    },
-    "&:not(:first-child)": {
-      marginTop: "-14px"
-    },
-    marginTop: "0",
-    marginBottom: "0"
-  },
+  // radioRoot: {
+  //   padding: "12px",
+  //   "&:hover": {
+  //     backgroundColor: "unset"
+  //   }
+  // },
+  // labelRoot: {
+  //   marginLeft: "-14px"
+  // },
+  // checkboxAndRadio: {
+  //   position: "relative",
+  //   display: "block",
+  //   marginTop: "10px",
+  //   marginBottom: "10px"
+  // },
+  // checkboxAndRadioHorizontal: {
+  //   position: "relative",
+  //   display: "block",
+  //   "&:first-child": {
+  //     marginTop: "10px"
+  //   },
+  //   "&:not(:first-child)": {
+  //     marginTop: "-14px"
+  //   },
+  //   marginTop: "0",
+  //   marginBottom: "0"
+  // },
   checked: {
     color: primaryColor + "!important"
   },
