@@ -1,0 +1,19 @@
+{
+  "name": "online_journal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-choonkiat/online_journal.git"
+  },
+  "author": "CK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k-choonkiat/online_journal/issues"
+  },
+  "homepage": "https://github.com/k-choonkiat/online_journal#readme"
+}
