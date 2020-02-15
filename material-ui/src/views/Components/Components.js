@@ -58,14 +58,26 @@ export default function Components(props) {
                 headerColor="primary"
                 tabs={[
                   {
-                    tabName: "Home",
+                    tabName: "Client",
                     tabIcon: Face,
                     tabContent: (
 
-                      <div className={classNames(classes.main, classes.mainRaised)}>
+                      <div className={classNames(classes.main)}>
+                        <Parallax image={require("assets/img/bg4.jpg")}>
+         <div className={classes.container}>
+             <div className={classes.brand}>
+                 <h1 className={classes.title}>Set my mood.</h1>
+                 <h3 className={classes.subtitle}>
+                   How are you feeling today.
+                 </h3>
+                 <h2>My form goes here... maybe</h2>
+               </div>
+          
+         </div>
+       </Parallax>
                       {/* <SectionBasics /> */}
-                      <SectionNavbars />
-                      <SectionTabs />
+                      {/* <SectionNavbars /> */}
+                      {/* <SectionTabs />
                       <SectionPills />
                       <SectionNotifications />
                       <SectionTypography />
@@ -81,7 +93,7 @@ export default function Components(props) {
                         </Link>
                       </GridItem>
                       <SectionExamples />
-                      <SectionDownload />
+                      <SectionDownload /> */}
                     </div>
 
 
