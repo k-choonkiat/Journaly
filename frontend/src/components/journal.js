@@ -23,10 +23,10 @@ export default class Journal extends React.Component {
       render() {
     const { users } = this.state;
     return (
-      <div className="row">
+      <div className="row" style={{display:"block"}}>
         <Nav/>
         {users.map(user => (
-          <div key={user.uid} className="col-lg-6 col-md-6 col-s-12 mb-4">
+          <div key={user.uid} className="col-lg-6 col-md-6 col-s-12 mb-4" style={{margin:"auto"}}>
             <div className="card h-100">
               <div className="card">
                 <div className="card-body">

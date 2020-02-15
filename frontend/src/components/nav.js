@@ -11,8 +11,8 @@ export default class Nav extends React.Component{
     <div>
       <Navbar bg="light" expand="lg">
   <Navbar.Brand href="Home">Home</Navbar.Brand>
+  <Navbar.Brand href="Journal">Journal</Navbar.Brand>
   <Navbar.Brand href="Counselor">Counselling Services</Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Form inline>
       <Button variant="outline-success">Search</Button>
