@@ -3,7 +3,12 @@ import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from './components/home.js';
 import User from './components/user.js';
 import Counselor from './components/counselor.js';
+<<<<<<< HEAD
 import './index.css';
+=======
+import Journal from './components/journal.js';
+import counselorView from './components/counselor_view';
+>>>>>>> master
 
 function App() {
   return (
@@ -12,6 +17,8 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/user" component={User} />
         <Route exact path="/counselor" component={Counselor} />
+        <Route exact path="/journal" component={Journal} />
+        <Route exact path="/counselor_view" component={counselorView} />
       </Switch>
     </Router>
   );
