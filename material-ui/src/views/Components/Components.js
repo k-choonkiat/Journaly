@@ -1,37 +1,25 @@
 import React from "react";
+import Card from "components/Card/Card.js";
+import Carousel from "react-slick";
 import clsx from 'clsx';
+import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
-
-// import FormLabel from '@material-ui/core/FormLabel';
-// import FormControl from '@material-ui/core/FormControl';
-// import FormGroup from '@material-ui/core/FormGroup';
-// import FormControlLabel from '@material-ui/core/FormControlLabel';
-// import FormHelperText from '@material-ui/core/FormHelperText';
-// import Switch from '@material-ui/core/Switch';
 import CustomTabs from "components/CustomTabs/CustomTabs.js";
 import Face from "@material-ui/icons/Face";
 import Chat from "@material-ui/icons/Chat";
 import Build from "@material-ui/icons/Build";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// react components for routing our app without refresh
 import { Link } from "react-router-dom";
-// @material-ui/core components
-// import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
-// core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
-// sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionBasics from "./Sections/SectionBasics.js";
 import SectionNavbars from "./Sections/SectionNavbars.js";
@@ -45,7 +33,6 @@ import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
 import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
-
 import styles from "assets/jss/material-kit-react/views/components.js";
 
 const useStyles = makeStyles({
@@ -112,136 +99,103 @@ export default function Components(props) {
   const { ...rest } = props;
   return (
     <div>
-      {/* <Header
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
-        fixed
-        color="transparent"
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
-        {...rest}
-      /> */}
+
       <GridContainer>
         <GridItem>
-        <CustomTabs
-                headerColor="primary"
-                tabs={[
-                  {
-                    tabName: "Client",
-                    tabIcon: Face,
-                    tabContent: (
-                      // image={require("")
-                      <div className={classNames(classes.main)}>
-                        <Parallax >
-         <div className={classes.container}>
-             <div className={classes.brand}>
-                 <h1 className={classes.title}>Healing is not Linear</h1>
-                 {/* <h9 className={classes.subtitle}>
-                 How Are You Feel Today?
-                 </h9> */}
-                 <FormControl component="fieldset">
-      <FormLabel component="legend">How Are You Feel Today?</FormLabel>
-      <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
-        <FormControlLabel value="female" control={<StyledRadio />} label="Confused" />
-        <FormControlLabel value="male" control={<StyledRadio />} label="Okay, I guess" />
-        <FormControlLabel value="other" control={<StyledRadio />} label="Energized" />
-        {/* <FormControlLabel
-          value="disabled"
-          disabled
-          control={<StyledRadio />}
-          label="(Disabled option)"
-        /> */}
-      </RadioGroup>
-    </FormControl>
-                 <h2></h2>
-               </div>
-          
-         </div>
-       </Parallax>
-                      {/* <SectionBasics /> */}
-                      {/* <SectionNavbars /> */}
-                      {/* <SectionTabs />
-                      <SectionPills />
-                      <SectionNotifications />
-                      <SectionTypography />
-                      <SectionJavascript />
-                      <SectionCarousel />
-                      <SectionCompletedExamples />
-                      <SectionLogin />
-                      <GridItem md={12} className={classes.textCenter}>
-                        <Link to={"/login-page"} className={classes.link}>
-                          <Button color="primary" size="lg" simple>
-                            View Login Page
-                          </Button>
-                        </Link>
-                      </GridItem>
-                      <SectionExamples />
-                      <SectionDownload /> */}
-                    </div>
-                    )
-                  },
-                  {
-                    tabName: "Counselors",
-                    tabIcon: Chat,
-                    tabContent: (
-                      <p className={classes.textCenter}>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. I will be the leader of a company
-                        that ends up being worth billions of dollars, because I
-                        got the answers. I understand culture. I am the nucleus.
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at.
-                      </p>
-                    )
-                  },
-                  {
-                    tabName: "Settings",
-                    tabIcon: Build,
-                    tabContent: (
-                      <p className={classes.textCenter}>
-                        think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
-                      </p>
-                    )
-                  }
-                ]}
-              />
-            </GridItem>
-            
-        </GridContainer>
-      
+          <CustomTabs
+            headerColor="primary"
+            tabs={[
+              {
+                tabName: "Client",
+                tabIcon: Face,
+                tabContent: (
+                  // image={require("")
+                  <div className={classNames(classes.main)}>
+                    <Parallax image={require("../hackbackground.jpg")}>
+                      <div className={classes.container}>
+                        <div className={classes.brand}>
+                          <h4 style={{ paddingLeft: "100px",marginRight:"220px"}} className={classes.title}>Healing is not Linear</h4>
+                          
+                          {/* <FormControl component="fieldset">
+                              <FormLabel component="legend">How Are You Feel Today?</FormLabel>
+                               <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
+                                 <FormControlLabel value="female" control={<StyledRadio />} label="Confused" />
+                                  <FormControlLabel value="male" control={<StyledRadio />} label="Okay, I guess" />
+                                   <FormControlLabel value="other" control={<StyledRadio />} label="Energized" />
+                                 <Button variant="outlined" color="primary"> Submit</Button>
+                                        </RadioGroup>
+                                            </FormControl>
+                          
+                                        <FormControl component="fieldset">
+                                            <FormLabel component="legend">How Are You Feel Today?</FormLabel>
+                                            <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
+                                              <FormControlLabel value="female" control={<StyledRadio />} label="Confused" />
+                                              <FormControlLabel value="male" control={<StyledRadio />} label="Okay, I guess" />
+                                              <FormControlLabel value="other" control={<StyledRadio />} label="Energized" />
+                                              <Button variant="outlined" color="primary">
+                                              Submit
+                                            </Button>
+                                            </RadioGroup>
+                                            </FormControl> */}
 
-      {/* <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionBasics />
-        <SectionNavbars />
-        <SectionTabs />
-        <SectionPills />
-        <SectionNotifications />
-        <SectionTypography />
-        <SectionJavascript />
-        <SectionCarousel />
-        <SectionCompletedExamples />
-        <SectionLogin />
-        <GridItem md={12} className={classes.textCenter}>
-          <Link to={"/login-page"} className={classes.link}>
-            <Button color="primary" size="lg" simple>
-              View Login Page
-            </Button>
-          </Link>
+                                            <FormControl style={{marginLeft:"500px",marginBottom:"110px",marginTop:"20px"}} component="fieldset">
+                                            <FormLabel style ={{Color:"purple"}}component="legend">How Are You Feel Today?</FormLabel>
+                                            <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
+                                              <FormControlLabel value="female" control={<StyledRadio />} label="Confused" />
+                                              <FormControlLabel value="male" control={<StyledRadio />} label="Okay, I guess" />
+                                              <FormControlLabel value="other" control={<StyledRadio />} label="Energized" />
+                                              <Button variant="outlined" color="primary">
+                                              Submit
+                                            </Button>
+                                            </RadioGroup>
+                                            </FormControl>
+                                            
+              }</div>
+
+                      </div>
+                              
+                    </Parallax>
+                  </div>
+                )
+              },
+              {
+                tabName: "Counselors",
+                tabIcon: Chat,
+                tabContent: (
+                  <p className={classes.textCenter}>
+                    I think that’s a responsibility that I have, to push
+                    possibilities, to show people, this is the level that
+                    things could be at. I will be the leader of a company
+                    that ends up being worth billions of dollars, because I
+                    got the answers. I understand culture. I am the nucleus.
+                    I think that’s a responsibility that I have, to push
+                    possibilities, to show people, this is the level that
+                    things could be at.
+                      </p>
+                )
+              },
+              {
+                tabName: "Settings",
+                tabIcon: Build,
+                tabContent: (
+                  <p className={classes.textCenter}>
+                    think that’s a responsibility that I have, to push
+                    possibilities, to show people, this is the level that
+                    things could be at. So when you get something that has
+                    the name Kanye West on it, it’s supposed to be pushing
+                    the furthest possibilities. I will be the leader of a
+                    company that ends up being worth billions of dollars,
+                    because I got the answers. I understand culture. I am
+                    the nucleus.
+                      </p>
+                )
+              }
+            ]}
+          />
         </GridItem>
-        <SectionExamples />
-        <SectionDownload />
-      </div> */}
+
+      </GridContainer>
+
       <Footer />
     </div>
   );
