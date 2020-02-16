@@ -31,30 +31,18 @@ import Select from '@material-ui/core/Select';
 // import Switch from '@material-ui/core/Switch';
 import CustomTabs from "components/CustomTabs/CustomTabs.js";
 import Face from "@material-ui/icons/Face";
-import Chat from "@material-ui/icons/Chat";
-import Build from "@material-ui/icons/Build";
-// nodejs library that concatenates classes
+import { db } from './firebase';
 import classNames from "classnames";
-// react components for routing our app without refresh
-import { Link } from "react-router-dom";
-// @material-ui/core components
-// import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
-// core components
-import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 // import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
-// sections for this page
-//import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-
 import Typography from '@material-ui/core/Typography';
 
 
@@ -76,8 +64,6 @@ import doctor2 from "../../assets/img/faces/c1.jpeg"
 import doctor3 from "../../assets/img/faces/c3.jpeg"
 import doctor4 from "../../assets/img/faces/c4.jpeg"
 import doctor5 from "../../assets/img/faces/c5.jpeg"
-
-import styles from "assets/jss/material-kit-react/views/components.js";
 
 const useStyles = makeStyles({
   root: {
@@ -215,7 +201,7 @@ export default function Components(props) {
                 headerColor="primary"
                 tabs={[
                   {
-                    tabName: "Client",
+                    tabName: "Entry",
                     tabIcon: Face,
                     tabContent: (
                       // image={require("")
@@ -228,7 +214,7 @@ export default function Components(props) {
                  How Are You Feel Today?
                  </h9> */}
                  <FormControl component="fieldset">
-      <FormLabel component="legend">How Are You Feel Today?</FormLabel>
+      <FormLabel component="legend">How do you feel today?</FormLabel>
       <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
         <FormControlLabel value="female" control={<StyledRadio />} label="Confused" />
         <FormControlLabel value="male" control={<StyledRadio />} label="Okay, I guess" />
@@ -334,6 +320,7 @@ export default function Components(props) {
                           </Typography>
                           <Typography variant="body2" color="textSecondary" component="p">
                           What is happiness? It’s a huge question, isn’t it? Many clients will say to their counsellors "I just want to be happy", yet when asked what that might look like, they have no idea. They often know that it is not 'this'; this feeling of...
+
                           </Typography>
                         </CardContent>
                       </CardActionArea>
@@ -359,6 +346,9 @@ export default function Components(props) {
                     </Card>
                       </div>
                         
+
+                    )
+                  },
 
 
                       <div>
@@ -487,6 +477,7 @@ export default function Components(props) {
 
                     ),
                   }            
+
                   //  {
                   //   tabName: "Settings",
                   //   tabIcon: Build,
