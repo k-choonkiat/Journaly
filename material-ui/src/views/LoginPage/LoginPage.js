@@ -35,7 +35,7 @@ export default function LoginPage(props) {
       <Header
         absolute
         color="transparent"
-        brand="Online Journal"
+        brand="Journaly"
       />
       <div
         className={classes.pageHeader}

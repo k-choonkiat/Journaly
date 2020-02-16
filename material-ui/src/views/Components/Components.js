@@ -46,6 +46,7 @@ import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfie
 import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom';
 import Create from './write.js';
+import '../../assets/css/components.css';
 
 
 
@@ -226,7 +227,7 @@ export default function Components(props) {
 
 
   return (
-    <div>
+    <div className="homeBG">
 
       <GridContainer>
         <GridItem>
@@ -239,16 +240,16 @@ export default function Components(props) {
                 tabContent: (
                   // image={require("")
                   <div className={classNames(classes.main)} style={{display: "inline"}}>
-                    <Parallax >
-                      <div className={classes.container} style={{width: '50%'}}>
-                        <div className={classes.brand}>
+                    <Parallax image={require('../hackbackground.jpg')}>
+                      <div className={classes.container} style={{width: '50%', margin: '20px'}}>
+                        <div className={classes.brand} style={{color:"#573f68"}}>
                           <h1 className={classes.title} style={{fontWeight: 'bold'}}>Healing is not Linear</h1>
                           <FormControl component="fieldset" style={{left: '20px'}}>
                             <FormLabel component="legend">How do you feel today?</FormLabel>
                             <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
-                              <FormControlLabel value="female" control={<StyledRadio />} label="Confused" />
-                              <FormControlLabel value="male" control={<StyledRadio />} label="Okay, I guess" />
-                              <FormControlLabel value="other" control={<StyledRadio />} label="Energized" />
+                              <FormControlLabel style={{color:"#573f68"}} value="female" control={<StyledRadio />} label="Confused" />
+                              <FormControlLabel style={{color:"#573f68"}} value="male" control={<StyledRadio />} label="Okay, I guess" />
+                              <FormControlLabel style={{color:"#573f68"}} value="other" control={<StyledRadio />} label="Energized" />
                             </RadioGroup>
                           </FormControl>
                           <h2></h2>
@@ -266,7 +267,19 @@ export default function Components(props) {
                 tabIcon: "personPinIcon",
                 tabContent:(
                   <div>
-                    <Link to="/journal-log">Read what other people are thinking about!</Link>
+                    <div style={{fontSize: "2em", padding: "70px 0", textAlign: "center"}}>
+                      <h2>“What happens when people open their hearts?"</h2>
+                      <h1>"They get better.” -Haruki Murakami</h1>
+                    </div>
+                    <div style={{fontSize: "1.25em", padding: "50px 0", textAlign: "center", borderWidth: "5px"}}>
+                      <Link  to="/journal-log">Look back and reflect at what makes you happy!</Link>
+                    </div>
+                    <div>
+                      <div style={{fontSize: "2em", padding: "70px 0", textAlign: "center"}}>
+                        <h2>“The emotion that can break your heart is sometimes the very one that heals it...”</h2>
+                        <h3>-Nicholas Sparks</h3>
+                      </div>
+                    </div>
                   </div>
                 )
               },
@@ -366,10 +379,6 @@ export default function Components(props) {
                         </CardActions>
                       </Card>
                     </div>
-
-
-                    )
-                  },
 
 
                       <div>
@@ -506,29 +515,31 @@ export default function Components(props) {
                   </div>
 
                 ),
+              },
+              {
+                tabName: "About Us",
+                tabIcon: "phoneIcon",
+                tabContent: (
+                  <div>
+                    <h3>At Journaly, we care about our community. We were on a mission to help our fellows realize their own potential. We focus on collecting data to better serve them. We analyze and process the data and then connect them to counselors to better support them.</h3>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <h3>Mahnoor Bibi</h3>
+                    <h3>Divya Sri Thala</h3>
+                    <h3>Kang Choon Kiat</h3>
+                    <h3>Xiangmin Mo</h3>
+                  </div>
+                )
               }
 
             ]}
           />
         </GridItem>
-
       </GridContainer>
-
-
-
-      
-      <Box component="fieldset" mb={3} borderColor="transparent">
-        <Typography component="legend">Custom icon and color</Typography>
-        <StyledRating
-          name="customized-color"
-          defaultValue={2}
-          getLabelText={value => `${value} Heart${value !== 1 ? 's' : ''}`}
-          precision={0.5}
-          icon={<FavoriteIcon fontSize="inherit" />}
-        />
-      </Box>
-
-
     </div>
   );
 }

@@ -44,17 +44,17 @@ export default class Create extends Component{
       <div>
           <h1>Write your heart out</h1>
           <form onSubmit={this.onSubmit}>
-            <label style={{fontSize: '1.5em'}} for="status">What do you want to share with us? </label>
+            <label style={{fontSize: '1.5em', color:"#573f68"}} for="status">What do you want to share with us? </label>
             <input style={{width: '75%', margin: '5px'}} type= "text" name= "status" value= {status} onChange= {this.onChangeStatus} placeholder= "Status" />
             
-            <label style={{fontSize: '1.5em'}} for="proud">What have you achieved today? </label>
+            <label style={{fontSize: '1.5em', color:"#573f68"}} for="proud">What have you achieved today? </label>
             <input style={{width: '75%', margin: '5px'}} type= "text" name= "proud" value= {proud} onChange= {this.onChangeProud} placeholder= "Achievement" />
 
             <br />
 
             <button type= "submit">Submit</button>
           </form>
-          <label for= "rate">Rating:</label>
+          <label style={{color:"#573f68", fontSize: '1.5em'}} for= "rate">Rating:</label>
           <select>
             <option value="1">1</option>
             <option value="2">2</option>

@@ -51,7 +51,7 @@ export default class Journal extends React.Component {
 
         ))}
         <div style={{ textAlign: 'center' }}>
-          <h3 style={{ fontSize: "2em", color: "WhiteSmoke", fontWeight: "bold" }}>Achievements:</h3>
+          <h3 style={{ fontSize: "2em", color: "WhiteSmoke", fontWeight: "bold" }}>What makes me happy:</h3>
         </div>
         {users.map(user => (
           <Card style={{ textAlign: "center", width: "60%", margin: "10px auto 10px auto", background: "rgb(204,204,204)", background: "rgba(204,204,204,0.85)" }}>
