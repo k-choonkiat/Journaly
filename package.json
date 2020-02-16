@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/k-choonkiat/online_journal/issues"
   },
-  "homepage": "https://github.com/k-choonkiat/online_journal#readme"
+  "homepage": "https://github.com/k-choonkiat/online_journal#readme",
+  "dependencies": {
+    "material-ui-rating": "^4.0.0-beta.2"
+  }
 }
