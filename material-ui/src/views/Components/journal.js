@@ -29,6 +29,7 @@ export default class Journal extends React.Component {
       });
   }
 
+
   render() {
     const { users } = this.state;
     return (
@@ -60,8 +61,8 @@ export default class Journal extends React.Component {
               </Typography>
             </CardContent>
           </Card>
-
         ))}
+
       </div>
     );
   }
