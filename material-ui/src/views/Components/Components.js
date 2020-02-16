@@ -56,6 +56,10 @@ import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
 import doctor1 from "../../assets/img/faces/a.jpg"
+import doctor2 from "../../assets/img/faces/b.jpg"
+import doctor3 from "../../assets/img/faces/c.jpg"
+import doctor4 from "../../assets/img/faces/d.jpg"
+import doctor5 from "../../assets/img/faces/e.jpg"
 
 import styles from "assets/jss/material-kit-react/views/components.js";
 
@@ -197,12 +201,9 @@ export default function Components(props) {
                   },
                   {
                     tabName: "Counselors",
-<<<<<<< HEAD
                     tabIcon: "personPinIcon",
-=======
-                    tabIcon: Chat,
->>>>>>> 89c4960157efb353a44306e5d9ce5a07a811a2f9
                     tabContent: (
+                      <div>
                       <Card className={classes.root}>
                       <CardActionArea>
                         < CardMedia
@@ -229,8 +230,125 @@ export default function Components(props) {
                         </Button>
                       </CardActions>
                     </Card>
-                    )
-                  },
+                    
+                    <Card className={classes.root}>
+                      <CardActionArea>
+                        < CardMedia
+                          className={classes.media}
+                          image= "bg3.jpg"
+                          title=  "Contemplative Reptile"
+                        />
+                        <CardContent>
+                          <img style= {{height: "200px", width: "180px"}} src= {doctor2} alt= "doctorB" />
+                          <Typography gutterBottom variant="h5" component="h2">
+                            Miachel Kamphff
+                          </Typography>
+                          <Typography variant="body2" color="textSecondary" component="p">
+                          What is happiness? It’s a huge question, isn’t it? Many clients will say to their counsellors "I just want to be happy", yet when asked what that might look like, they have no idea. They often know that it is not 'this'; this feeling of...
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <Button size="small" color="primary">
+                          Share
+                        </Button>
+                        <Button size="small" color="primary">
+                          Learn More
+                        </Button>
+                      </CardActions>
+                    </Card>
+
+
+
+                    <Card className={classes.root}>
+                      <CardActionArea>
+                        < CardMedia
+                          className={classes.media}
+                          image= "bg3.jpg"
+                          title=  "Contemplative Reptile"
+                        />
+                        <CardContent>
+                          <img style= {{height: "200px", width: "180px"}} src= {doctor3} alt= "doctorC" />
+                          <Typography gutterBottom variant="h5" component="h2">
+                            Patric Star
+                          </Typography>
+                          <Typography variant="body2" color="textSecondary" component="p">
+                          Often, people ask me how I am in polite conversation; my stock response is "I'm OK thanks". But, when I stop to think about how I am, often I have a lot of things going on. Things ranging from day to day mundane stuff to things that may be causing...
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <Button size="small" color="primary">
+                          Share
+                        </Button>
+                        <Button size="small" color="primary">
+                          Learn More
+                        </Button>
+                      </CardActions>
+                    </Card>
+
+
+
+                    <Card className={classes.root}>
+                      <CardActionArea>
+                        < CardMedia
+                          className={classes.media}
+                          image= "bg3.jpg"
+                          title=  "Contemplative Reptile"
+                        />
+                        <CardContent>
+                          <img style= {{height: "200px", width: "250px"}} src= {doctor4} alt= "doctorD" />
+                          <Typography gutterBottom variant="h5" component="h2">
+                            Mira klein
+                          </Typography>
+                          <Typography variant="body2" color="textSecondary" component="p">
+                          When you come for cognitive behaviour therapy, the anxiety and depression that you come forward to work on is addressed by looking at two main aspects - cognitions first, then the behaviours. What are cognitions? The definition of cognition is "the...
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <Button size="small" color="primary">
+                          Share
+                        </Button>
+                        <Button size="small" color="primary">
+                          Learn More
+                        </Button>
+                      </CardActions>
+                    </Card>
+
+
+
+
+                    <Card className={classes.root}>
+                      <CardActionArea>
+                        < CardMedia
+                          className={classes.media}
+                          image= "bg3.jpg"
+                          title=  "Contemplative Reptile"
+                        />
+                        <CardContent>
+                          <img style= {{height: "200px", width: "180px"}} src= {doctor5} alt= "doctorE" />
+                          <Typography gutterBottom variant="h5" component="h2">
+                            Mariam sen
+                          </Typography>
+                          <Typography variant="body2" color="textSecondary" component="p">
+                          Anxiety can affect all our lives in so many ways, and it's certainly an issue that is being explored more frequently in the therapy room. All of us can feel anxious, and we can often effectively manage these complex emotions, but sometimes our...
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <Button size="small" color="primary">
+                          Share
+                        </Button>
+                        <Button size="small" color="primary">
+                          Learn More
+                        </Button>
+                      </CardActions>
+                    </Card>
+                    </div>
+
+                    ),
+                  }            
                   //  {
                   //   tabName: "Settings",
                   //   tabIcon: Build,
