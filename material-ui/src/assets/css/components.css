@@ -6,4 +6,5 @@
   position: absolute;
   z-index: -1;
   font-family: 'Roboto', sans-serif;
+  width: 100%;
 }
