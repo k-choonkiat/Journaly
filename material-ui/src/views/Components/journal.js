@@ -43,7 +43,7 @@ export default class Journal extends React.Component {
                 ))}
                 <div style={{ textAlign: 'center' }}>
                     <br /><br />
-                    <h3>Proud Moments</h3>
+
                 </div>
                 {users.map(user => (
                     <Card style={{ maxwidth: '345' }}>
