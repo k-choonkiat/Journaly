@@ -44,8 +44,8 @@ export default class Journal extends React.Component {
 
                 ))}
                 <div style={{ textAlign: 'center' }}>
-                    <br /><br /
-                    ><h3>Negative things that happen recently</h3>
+                    <br /><br />
+                    <h3>Negative things that happen recently</h3>
                 </div>
                 {users.map(user => (
                     <Card style={{ maxwidth: '345' }}>
