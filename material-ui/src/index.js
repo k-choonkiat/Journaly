@@ -12,7 +12,8 @@ import LandingPage from "views/LandingPage/LandingPage.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import CounselorView from "views/Components/counselor-view";
-import Journal from "views/Components/journal"
+import Journal from "views/Components/journal";
+import Write from "views/Components/write.js";
 
 var hist = createBrowserHistory();
 
@@ -25,6 +26,7 @@ ReactDOM.render(
       <Route path="/home" component={Components} />
       <Route path="/counselor-view" component={CounselorView} />
       <Route path="/journal-log" component={Journal} />
+      <Route path="/write" component= {Write} />
     </Switch>
   </Router>,
   document.getElementById("root")
