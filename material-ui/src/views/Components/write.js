@@ -42,13 +42,15 @@ export default class Create extends Component{
     const {status, proud} = this.state;
     return(
       <div>
-          <h3>Write your heart out</h3>
+          <h1>Write your heart out</h1>
           <form onSubmit={this.onSubmit}>
-            <label for="status">Status: </label>
-            <input type= "text" name= "status" value= {status} onChange= {this.onChangeStatus} placeholder= "Status" />
+            <label style={{fontSize: '1.5em'}} for="status">What do you want to share with us? </label>
+            <input style={{width: '75%', margin: '5px'}} type= "text" name= "status" value= {status} onChange= {this.onChangeStatus} placeholder= "Status" />
             
-            <label for="proud">Achievement: </label>
-            <input type= "text" name= "proud" value= {proud} onChange= {this.onChangeProud} placeholder= "Achievement" />
+            <label style={{fontSize: '1.5em'}} for="proud">What have you achieved today? </label>
+            <input style={{width: '75%', margin: '5px'}} type= "text" name= "proud" value= {proud} onChange= {this.onChangeProud} placeholder= "Achievement" />
+
+            <br />
 
             <button type= "submit">Submit</button>
           </form>

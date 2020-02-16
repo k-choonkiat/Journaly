@@ -44,6 +44,8 @@ import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAltO
 import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
 //import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import { Link } from 'react-router-dom';
+import Create from './write.js';
 
 
 
@@ -232,16 +234,16 @@ export default function Components(props) {
             headerColor="primary"
             tabs={[
               {
-                tabName: "Entry",
+                tabName: "Home",
                 tabIcon: Face,
                 tabContent: (
                   // image={require("")
-                  <div className={classNames(classes.main)}>
+                  <div className={classNames(classes.main)} style={{display: "inline"}}>
                     <Parallax >
-                      <div className={classes.container}>
+                      <div className={classes.container} style={{width: '50%'}}>
                         <div className={classes.brand}>
-                          <h1 className={classes.title}>Healing is not Linear</h1>
-                          <FormControl component="fieldset">
+                          <h1 className={classes.title} style={{fontWeight: 'bold'}}>Healing is not Linear</h1>
+                          <FormControl component="fieldset" style={{left: '20px'}}>
                             <FormLabel component="legend">How do you feel today?</FormLabel>
                             <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
                               <FormControlLabel value="female" control={<StyledRadio />} label="Confused" />
@@ -253,13 +255,24 @@ export default function Components(props) {
                         </div>
 
                       </div>
+                      
+                    <Create />
                     </Parallax>
                   </div>
                 )
               },
               {
-                tabName: "Counselors",
+                tabName: "Journal",
                 tabIcon: "personPinIcon",
+                tabContent:(
+                  <div>
+                    <Link to="/journal-log">Read what other people are thinking about!</Link>
+                  </div>
+                )
+              },
+              {
+                tabName: "Counselors",
+                tabIcon: "favoriteIcon",
                 tabContent: (
                   <div>
                     <div>
