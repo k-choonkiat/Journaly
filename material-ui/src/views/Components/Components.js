@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "components/Card/Card.js";
-import Carousel from "react-slick";
 import clsx from 'clsx';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,61 +8,21 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
-
-
-
-// import { makeStyles } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import InputLabel from '@material-ui/core/InputLabel';
-import Input from '@material-ui/core/Input';
-import MenuItem from '@material-ui/core/MenuItem';
-// import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-
-
-
-// import FormLabel from '@material-ui/core/FormLabel';
-// import FormControl from '@material-ui/core/FormControl';
-// import FormGroup from '@material-ui/core/FormGroup';
-// import FormControlLabel from '@material-ui/core/FormControlLabel';
-// import FormHelperText from '@material-ui/core/FormHelperText';
-// import Switch from '@material-ui/core/Switch';
 import CustomTabs from "components/CustomTabs/CustomTabs.js";
 import Face from "@material-ui/icons/Face";
-import Chat from "@material-ui/icons/Chat";
-import Build from "@material-ui/icons/Build";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
-import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Parallax from "components/Parallax/Parallax.js";
-
-
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-
-
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import SectionBasics from "./Sections/SectionBasics.js";
-import SectionNavbars from "./Sections/SectionNavbars.js";
-import SectionTabs from "./Sections/SectionTabs.js";
-import SectionPills from "./Sections/SectionPills.js";
-import SectionNotifications from "./Sections/SectionNotifications.js";
-import SectionTypography from "./Sections/SectionTypography.js";
-import SectionJavascript from "./Sections/SectionJavascript.js";
-import SectionCarousel from "./Sections/SectionCarousel.js";
-import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
-import SectionLogin from "./Sections/SectionLogin.js";
-import SectionExamples from "./Sections/SectionExamples.js";
-import SectionDownload from "./Sections/SectionDownload.js";
 import doctor1 from "../../assets/img/faces/con2.jpg"
 import doctor2 from "../../assets/img/faces/con1.jpg"
 import doctor3 from "../../assets/img/faces/con4.jpg"
@@ -132,6 +91,15 @@ function StyledRadio(props) {
 export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
+  const [fullWidth, setFullWidth] = React.useState(true);
+  const [maxWidth, setMaxWidth] = React.useState('sm');
+  const handleMaxWidthChange = event => {
+    setMaxWidth(event.target.value);
+  };
+
+  const handleFullWidthChange = event => {
+    setFullWidth(event.target.checked);
+  };
 
 
   // export default function DialogSelect() {
@@ -181,7 +149,6 @@ export default function Components(props) {
   const handleClose5 = () => {
     setOpen5(false);
   };
-
 
 
 
@@ -239,6 +206,9 @@ export default function Components(props) {
                           <Typography gutterBottom variant="h5" component="h2">
                             Mary Jones
                           </Typography>
+                          <Typography gutterBottom variant="h6" component="h2">
+                            Specialty: Marriage
+                          </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
                               When asked what they want to change when they come to counselling, many people say they just want to be happy. However, when asked how they would know they were happy, most of them are completely stumped. Happiness seems to be something people...
                           </Typography>
@@ -253,11 +223,11 @@ export default function Components(props) {
 
 
                             <Button onClick={handleClickOpen}>Contact</Button>
-                            <Dialog className="1" disableBackdropClick disableEscapeKeyDown open={open} onClose={handleClose}>
-                              <DialogTitle style={{ textAlign: "center" }}>Contact No</DialogTitle>
+                            <Dialog aria-labelledby="alert-dialog-title" fullWidth={fullWidth} maxWidth={maxWidth} className="1" disableBackdropClick disableEscapeKeyDown open={open} onClose={handleClose}>
+                              <DialogTitle id="alert-dialog-title" style={{ textAlign: "center" }}>{"Contact No"}</DialogTitle>
                               <h5 style={{ textAlign: "center", fontWeight: "bold" }}>6755678945</h5>
                               <DialogTitle style={{ textAlign: "center" }}>Email ID</DialogTitle>
-                              <h5 style={{ textAlign: "center", fontSize: "0.80em", fontWeight: "bold" }}>mary.jonas@gmail.com</h5>
+                              <h5 style={{ textAlign: "center", fontWeight: "bold" }}>mary.jonas@gmail.com</h5>
 
                               <DialogActions>
                                 <Button onClick={handleClose} color="primary">
@@ -283,10 +253,14 @@ export default function Components(props) {
                           <Typography gutterBottom variant="h5" component="h2">
                             Miachel Kamphff
                           </Typography>
+                          <Typography gutterBottom variant="h6" component="h2">
+                            Specialty: Mental Health
+                          </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
                               What is happiness? It’s a huge question, isn’t it? Many clients will say to their counsellors "I just want to be happy", yet when asked what that might look like, they have no idea. They often know that it is not 'this'; this feeling of...
     
                           </Typography>
+                          
                           </CardContent>
                         </CardActionArea>
                         <CardActions>
@@ -295,11 +269,11 @@ export default function Components(props) {
                         </Button>
                           <Button size="small" color="primary">
                             <Button onClick={handleClickOpen2}>Contact</Button>
-                            <Dialog className="2" disableBackdropClick disableEscapeKeyDown open={open2} onClose={handleClose2}>
+                            <Dialog fullWidth={fullWidth} maxWidth={maxWidth} className="2" disableBackdropClick disableEscapeKeyDown open={open2} onClose={handleClose2}>
                               <DialogTitle style={{ textAlign: "center" }}>Contact No</DialogTitle>
                               <h5 style={{ textAlign: "center", fontWeight: "bold" }}>7645626363</h5>
                               <DialogTitle style={{ textAlign: "center" }}>Email ID</DialogTitle>
-                              <h5 style={{ textAlign: "center", fontSize: "0.80em", fontWeight: "bold" }}>miachel.kamphff@gmail.com</h5>
+                              <h5 style={{ textAlign: "center", fontWeight: "bold" }}>miachel.kamphff@gmail.com</h5>
                               <DialogActions>
                                 <Button onClick={handleClose2} color="primary">
                                   Ok
@@ -329,6 +303,9 @@ export default function Components(props) {
                             <Typography gutterBottom variant="h5" component="h2">
                               Patric Star
                           </Typography>
+                          <Typography gutterBottom variant="h6" component="h2">
+                            Specialty: Substance
+                          </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
                               Often, people ask me how I am in polite conversation; my stock response is "I'm OK thanks". But, when I stop to think about how I am, often I have a lot of things going on. Things ranging from day to day mundane stuff to things that may be causing...
                           </Typography>
@@ -340,11 +317,11 @@ export default function Components(props) {
                         </Button>
                           <Button size="small" color="primary">
                             <Button onClick={handleClickOpen3}>Contact</Button>
-                            <Dialog className="3" disableBackdropClick disableEscapeKeyDown open={open3} onClose={handleClose3}>
+                            <Dialog fullWidth={fullWidth} maxWidth={maxWidth} className="3" disableBackdropClick disableEscapeKeyDown open={open3} onClose={handleClose3}>
                               <DialogTitle style={{ textAlign: "center" }}>Contact No</DialogTitle>
                               <h5 style={{ textAlign: "center", fontWeight: "bold" }}>5436467488</h5>
                               <DialogTitle style={{ textAlign: "center" }}>Email ID</DialogTitle>
-                              <h5 style={{ textAlign: "center", fontSize: "0.80em", fontWeight: "bold" }}>patric.star@gmail.com</h5>
+                              <h5 style={{ textAlign: "center", fontWeight: "bold" }}>patric.star@gmail.com</h5>
 
                               <DialogActions>
                                 <Button onClick={handleClose3} color="primary">
@@ -367,9 +344,12 @@ export default function Components(props) {
                           title=  "Contemplative Reptile"
                         />
                         <CardContent>
-                          <img style= {{height: "200px", width: "10px"}} src= {doctor4} alt= "doctorD" />
+                          <img style= {{height: "200px", width: "150px"}} src= {doctor4} alt= "doctorD" />
                           <Typography gutterBottom variant="h5" component="h2">
                             Joseph Clain
+                          </Typography>
+                          <Typography gutterBottom variant="h6" component="h2">
+                            Specialty: Mental Health
                           </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
                               When you come for cognitive behaviour therapy, the anxiety and depression that you come forward to work on is addressed by looking at two main aspects - cognitions first, then the behaviours. What are cognitions? The definition of cognition is "the...
@@ -382,11 +362,11 @@ export default function Components(props) {
                         </Button>
                           <Button size="small" color="primary">
                             <Button onClick={handleClickOpen4}>Contact</Button>
-                            <Dialog className="4" disableBackdropClick disableEscapeKeyDown open={open4} onClose={handleClose4}>
+                            <Dialog fullWidth={fullWidth} maxWidth={maxWidth} className="4" disableBackdropClick disableEscapeKeyDown open={open4} onClose={handleClose4}>
                               <DialogTitle style={{ textAlign: "center" }}>Contact No</DialogTitle>
                               <h5 style={{ textAlign: "center", fontWeight: "bold" }}>4467747478</h5>
                               <DialogTitle style={{ textAlign: "center" }}>Email ID</DialogTitle>
-                              <h5 style={{ textAlign: "center", fontSize: "0.80em", fontWeight: "bold" }}>joseph.clain@gmail.com</h5>
+                              <h5 style={{ textAlign: "center", fontWeight: "bold" }}>joseph.clain@gmail.com</h5>
                               <DialogActions>
                                 <Button onClick={handleClose4} color="primary">
                                   Ok
@@ -412,6 +392,9 @@ export default function Components(props) {
                             <Typography gutterBottom variant="h5" component="h2">
                               Mira Kathy
                           </Typography>
+                          <Typography gutterBottom variant="h6" component="h2">
+                            Specialty: Substance Abuse
+                          </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
                               Anxiety can affect all our lives in so many ways, and it's certainly an issue that is being explored more frequently in the therapy room. All of us can feel anxious, and we can often effectively manage these complex emotions, but sometimes our...
                           </Typography>
@@ -423,11 +406,11 @@ export default function Components(props) {
                         </Button>
                           <Button size="small" color="primary">
                             <Button onClick={handleClickOpen5}>Contact</Button>
-                            <Dialog className="5" disableBackdropClick disableEscapeKeyDown open={open5} onClose={handleClose5}>
+                            <Dialog fullWidth={fullWidth} maxWidth={maxWidth} className="5" disableBackdropClick disableEscapeKeyDown open={open5} onClose={handleClose5}>
                               <DialogTitle style={{ textAlign: "center" }}>Contact No</DialogTitle>
                               <h5 style={{ textAlign: "center", fontWeight: "bold" }}>6476545660</h5>
                               <DialogTitle style={{ textAlign: "center" }}>Email ID</DialogTitle>
-                              <h5 style={{ textAlign: "center", fontSize: "0.80em", fontWeight: "bold" }}>mira.kathy@gmail.com</h5>
+                              <h5 style={{ textAlign: "center", fontWeight: "bold" }}>mira.kathy@gmail.com</h5>
                               <DialogActions>
                                 <Button onClick={handleClose5} color="primary">
                                   Ok
@@ -451,4 +434,4 @@ export default function Components(props) {
 
     </div>
   );
-}
+};
