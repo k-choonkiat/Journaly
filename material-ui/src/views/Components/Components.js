@@ -59,11 +59,11 @@ import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
 import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
-import doctor1 from "../../assets/img/faces/c2.jpeg"
-import doctor2 from "../../assets/img/faces/c1.jpeg"
-import doctor3 from "../../assets/img/faces/c3.jpeg"
-import doctor4 from "../../assets/img/faces/c4.jpeg"
-import doctor5 from "../../assets/img/faces/c5.jpeg"
+import doctor1 from "../../assets/img/faces/con2.jpg"
+import doctor2 from "../../assets/img/faces/con1.jpg"
+import doctor3 from "../../assets/img/faces/con4.jpg"
+import doctor4 from "../../assets/img/faces/con5.jpg"
+import doctor5 from "../../assets/img/faces/con3.png"
 
 const useStyles = makeStyles({
   root: {
@@ -270,7 +270,7 @@ export default function Components(props) {
                           title=  "Contemplative Reptile"
                         />
                         <CardContent>
-                          <img style= {{height: "200px", width: "280px"}} src= {doctor1} alt= "doctorA" />
+                          <img style= {{height: "200px", width: "180px"}} src= {doctor1} alt= "doctorA" />
                           <Typography gutterBottom variant="h5" component="h2">
                             Mary Jones
                           </Typography>
@@ -314,7 +314,7 @@ export default function Components(props) {
                           title=  "Contemplative Reptile"
                         />
                         <CardContent>
-                          <img style= {{height: "200px", width: "280px"}} src= {doctor2} alt= "doctorB" />
+                          <img style= {{height: "200px", width: "180px"}} src= {doctor2} alt= "doctorB" />
                           <Typography gutterBottom variant="h5" component="h2">
                             Miachel Kamphff
                           </Typography>
@@ -402,7 +402,7 @@ export default function Components(props) {
                           title=  "Contemplative Reptile"
                         />
                         <CardContent>
-                          <img style= {{height: "200px", width: "280px"}} src= {doctor4} alt= "doctorD" />
+                          <img style= {{height: "200px", width: "180px"}} src= {doctor4} alt= "doctorD" />
                           <Typography gutterBottom variant="h5" component="h2">
                             joseph clain
                           </Typography>
