@@ -196,64 +196,6 @@ export default function Components(props) {
             headerColor="primary"
             tabs={[
               {
-                tabName: "Client",
-                tabIcon: Face,
-                tabContent: (
-                  // image={require("")
-                  <div className={classNames(classes.main)}>
-                    <Parallax image={require("../hackbackground.jpg")}>
-                      <div className={classes.container}>
-                        <div className={classes.brand}>
-                          <h4 style={{ paddingLeft: "100px", marginRight: "220px" }} className={classes.title}>Healing is not Linear</h4>
-
-                          {/* <FormControl component="fieldset">
-                              <FormLabel component="legend">How Are You Feel Today?</FormLabel>
-                               <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
-                                 <FormControlLabel value="female" control={<StyledRadio />} label="Confused" />
-                                  <FormControlLabel value="male" control={<StyledRadio />} label="Okay, I guess" />
-                                   <FormControlLabel value="other" control={<StyledRadio />} label="Energized" />
-                                 <Button variant="outlined" color="primary"> Submit</Button>
-                                        </RadioGroup>
-                                            </FormControl>
-                          
-                                        <FormControl component="fieldset">
-                                            <FormLabel component="legend">How Are You Feel Today?</FormLabel>
-                                            <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
-                                              <FormControlLabel value="female" control={<StyledRadio />} label="Confused" />
-                                              <FormControlLabel value="male" control={<StyledRadio />} label="Okay, I guess" />
-                                              <FormControlLabel value="other" control={<StyledRadio />} label="Energized" />
-                                              <Button variant="outlined" color="primary">
-                                              Submit
-                                            </Button>
-                                            </RadioGroup>
-                                            </FormControl> */}
-
-                          <FormControl style={{ marginLeft: "500px", marginBottom: "110px", marginTop: "20px" }} component="fieldset">
-                            <FormLabel style={{ Color: "purple" }} component="legend">How Are You Feel Today?</FormLabel>
-                            <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
-                              <FormControlLabel value="female" control={<StyledRadio />} label="Confused" />
-                              <FormControlLabel value="male" control={<StyledRadio />} label="Okay, I guess" />
-                              <FormControlLabel value="other" control={<StyledRadio />} label="Energized" />
-                              <Button variant="outlined" color="primary">
-                                Submit
-                                            </Button>
-                            </RadioGroup>
-                          </FormControl>
-
-                          }</div>
-
-                      </div>
-
-                    </Parallax>
-                  </div>
-                )
-              }
-            ]}
-          />
-          <CustomTabs
-            headerColor="primary"
-            tabs={[
-              {
                 tabName: "Entry",
                 tabIcon: Face,
                 tabContent: (
@@ -263,21 +205,12 @@ export default function Components(props) {
                       <div className={classes.container}>
                         <div className={classes.brand}>
                           <h1 className={classes.title}>Healing is not Linear</h1>
-                          {/* <h9 className={classes.subtitle}>
-                 How Are You Feel Today?
-                 </h9> */}
                           <FormControl component="fieldset">
                             <FormLabel component="legend">How do you feel today?</FormLabel>
                             <RadioGroup defaultValue="female" aria-label="gender" name="customized-radios">
                               <FormControlLabel value="female" control={<StyledRadio />} label="Confused" />
                               <FormControlLabel value="male" control={<StyledRadio />} label="Okay, I guess" />
                               <FormControlLabel value="other" control={<StyledRadio />} label="Energized" />
-                              {/* <FormControlLabel
-          value="disabled"
-          disabled
-          control={<StyledRadio />}
-          label="(Disabled option)"
-        /> */}
                             </RadioGroup>
                           </FormControl>
                           <h2></h2>
@@ -285,27 +218,6 @@ export default function Components(props) {
 
                       </div>
                     </Parallax>
-                    {/* <SectionBasics /> */}
-                    {/* <SectionNavbars /> */}
-                    {/* <SectionTabs />
-                      {/* <SectionNavbars />
-                      <SectionTabs />
-                      <SectionPills />
-                      <SectionNotifications />
-                      <SectionTypography />
-                      <SectionJavascript />
-                      <SectionCarousel />
-                      <SectionCompletedExamples />
-                      <SectionLogin />
-                      <GridItem md={12} className={classes.textCenter}>
-                        <Link to={"/login-page"} className={classes.link}>
-                          <Button color="primary" size="lg" simple>
-                            View Login Page
-                          </Button>
-                        </Link>
-                      </GridItem>
-                      <SectionExamples />
-                      <SectionDownload /> */}
                   </div>
                 )
               },
@@ -455,9 +367,9 @@ export default function Components(props) {
                           title=  "Contemplative Reptile"
                         />
                         <CardContent>
-                          <img style= {{height: "200px", width: "180px"}} src= {doctor4} alt= "doctorD" />
+                          <img style= {{height: "200px", width: "10px"}} src= {doctor4} alt= "doctorD" />
                           <Typography gutterBottom variant="h5" component="h2">
-                            joseph clain
+                            Joseph Clain
                           </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
                               When you come for cognitive behaviour therapy, the anxiety and depression that you come forward to work on is addressed by looking at two main aspects - cognitions first, then the behaviours. What are cognitions? The definition of cognition is "the...
@@ -496,9 +408,9 @@ export default function Components(props) {
                             title="Contemplative Reptile"
                           />
                           <CardContent>
-                            <img style={{ height: "200px", width: "280px" }} src={doctor5} alt="doctorE" />
+                            <img style={{ height: "200px", width: "200px" }} src={doctor5} alt="doctorE" />
                             <Typography gutterBottom variant="h5" component="h2">
-                              Mira kathy
+                              Mira Kathy
                           </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
                               Anxiety can affect all our lives in so many ways, and it's certainly an issue that is being explored more frequently in the therapy room. All of us can feel anxious, and we can often effectively manage these complex emotions, but sometimes our...
@@ -531,51 +443,12 @@ export default function Components(props) {
                 ),
               }
 
-              //  {
-              //   tabName: "Settings",
-              //   tabIcon: Build,
-              //   tabContent: (
-              //     <p className={classes.textCenter}>
-              //       think that’s a responsibility that I have, to push
-              //       possibilities, to show people, this is the level that
-              //       things could be at. So when you get something that has
-              //       the name Kanye West on it, it’s supposed to be pushing
-              //       the furthest possibilities. I will be the leader of a
-              //       company that ends up being worth billions of dollars,
-              //       because I got the answers. I understand culture. I am
-              //       the nucleus.
-              //     </p>
-              //   )
-              //  }
             ]}
           />
         </GridItem>
 
       </GridContainer>
 
-
-      {/* <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionBasics />
-        <SectionNavbars />
-        <SectionTabs />
-        <SectionPills />
-        <SectionNotifications />
-        <SectionTypography />
-        <SectionJavascript />
-        <SectionCarousel />
-        <SectionCompletedExamples />
-        <SectionLogin />
-        <GridItem md={12} className={classes.textCenter}>
-          <Link to={"/login-page"} className={classes.link}>
-            <Button color="primary" size="lg" simple>
-              View Login Page
-            </Button>
-          </Link>
-        </GridItem>
-
-      </GridContainer>
-
-      <Footer />*/}
     </div>
   );
 }
