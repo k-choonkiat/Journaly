@@ -1,5 +1,6 @@
-# online_journal
-## Hack@CEWIT project
+# Journaly
+Hack@CEWIT project; winner of the "Best Social Impact: Good for Mankind" award!
+
 ### This is an online journal for individuals who wants to fight depression
 
 # To run:
