@@ -7,7 +7,7 @@ import Calendar from 'react-calendar';
 import Navbar from 'react-bootstrap/Navbar';
 import Modal from 'react-bootstrap/Modal';
 import { Chart } from "react-google-charts";
-
+import { Link } from 'react-router-dom';
 
 
 const data = [
@@ -98,7 +98,8 @@ export default class Journal extends React.Component {
                     itemHappy={this.state.activeItemHappy}
                     itemSad={this.state.activeItemSad}
                 />
-                <Navbar collapseOnSelect expand="lg" bg="dark" >Home
+                <Navbar collapseOnSelect expand="lg" bg="dark" >
+                    <Link to="/home">Home</Link>
                 </Navbar><br />
                 <div style={{ display: "flex", flexDirection: "column" }}>
                     <h3 style={{ textAlign: "center" }}>Meetings</h3>
