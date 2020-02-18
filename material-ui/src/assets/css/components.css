@@ -1,0 +1,10 @@
+.homeBG{
+  background: url(../img/landing-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+}
