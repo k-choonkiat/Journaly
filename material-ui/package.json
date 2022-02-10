@@ -13,7 +13,7 @@
     "history": "4.9.0",
     "moment": "2.24.0",
     "navbar": "^2.1.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "node-sentiment": "0.0.7",
     "nouislider": "14.0.2",
     "prop-types": "15.7.2",
