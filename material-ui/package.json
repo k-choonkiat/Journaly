@@ -11,7 +11,7 @@
     "classnames": "2.2.6",
     "firebase": "^7.8.2",
     "history": "4.9.0",
-    "moment": "2.24.0",
+    "moment": "2.29.4",
     "navbar": "^2.1.0",
     "node-sass": "^4.13.1",
     "node-sentiment": "0.0.7",
